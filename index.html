@@ -18,11 +18,28 @@
 		/* Now, let's apply it on an element */
 		body {
 		  font-family: "system";
+		  align-items: "center";
+		  text-align: "center";
 		}
 		span.emoji {
 		  font-size: 80px;
 		  vertical-align: middle;
 		  line-height: 2;
+		}
+		.wrapper {
+    		text-align: center;
+		}
+		.button {
+		  background-color: #02A698; /* Green */
+		  border-radius: 8px;
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 18px;
+		  font-weight: bold;
 		}
 	</style>
 
@@ -60,13 +77,24 @@
 		  return array;
 		}
 		
-		var randomFoodList = shuffle(foodList);
+
+		function generate() {
+			var randomFoodList = shuffle(foodList);
 		
-		var randomItem = randomFoodList[0];
-		var randomItem2 = randomFoodList[1];
-		var randomItem3 = randomFoodList[2];
+			var randomItem = randomFoodList[0];
+			var randomItem2 = randomFoodList[1];
+			var randomItem3 = randomFoodList[2];
+			
+			document.body.innerHTML = '<font color=#FF7B59><h2 align="center"><span class="emoji">🍔🌭🍕🍗</span></br></br></br>' + 
+			randomItem + '</br>' +
+			randomItem2 + '</br>' + 
+			randomItem3 + 
+			'	</br></br></br><span class="emoji">🍔🌭🍕🍗</span></h2></font>' +
+			'<div class="wrapper"><button class="button" onclick="generate()" align="center"><font color=#FFFFFF>Click me</font></button></div>';
+		}
+
+		generate();
 		
-		document.body.innerHTML = '<font color=#FF7B59><h2 align="center"><span class="emoji">🍔🌭🍕🍗</span></br></br></br>' + randomItem + '</br>' +randomItem2 + '</br>' + randomItem3 + '</br></br></br><span class="emoji">🍔🌭🍕🍗</span></h2></font>';
     </script>
 
 </html>
