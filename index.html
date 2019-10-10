@@ -6,9 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hetvegi ebed</title>
    
+	<style>
+		/* Define the "system" font family */
+		@font-face {
+		  font-family: system;
+		  font-style: normal;
+		  font-weight: 300;
+		  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("	Taho	ma");
+		}
+		
+		/* Now, let's apply it on an element */
+		body {
+		  font-family: "system";
+		}
+	</style>
+
 </head>
 
-<body>
+<body style="background-color:#02122C;">
 
 </body>
 
@@ -46,7 +61,7 @@
 		var randomItem2 = randomFoodList[1];
 		var randomItem3 = randomFoodList[2];
 		
-		document.body.innerHTML = randomItem + "</br>" + randomItem2 + "</br>" + randomItem3 + "</br>";
+		document.body.innerHTML = '<font color=#FF7B59><h2 align="center">' + randomItem + '</br>' +randomItem2 + '</br>' + randomItem3 + '</br></h2></font>';
     </script>
 
 </html>
