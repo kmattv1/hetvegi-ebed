@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hetvegi ebed</title>
+    <script>
+		var foodList = [
+		  "Rantott hus",
+		  "Bolognai",
+		  "Borzaska",
+		  "Hirtelen sult",
+		  "Hagymas hus"
+		];
+
+		function shuffle(array) {
+		  var currentIndex = array.length, temporaryValue, randomIndex;
+		
+		  // While there remain elements to shuffle...
+		  while (0 !== currentIndex) {
+		
+		    // Pick a remaining element...
+		    randomIndex = Math.floor(Math.random() * currentIndex);
+		    currentIndex -= 1;
+		
+		    // And swap it with the current element.
+		    temporaryValue = array[currentIndex];
+		    array[currentIndex] = array[randomIndex];
+		    array[randomIndex] = temporaryValue;
+		  }
+		
+		  return array;
+		}
+		
+		var randomFoodList = shuffle(foodList);
+		
+		var randomItem = randomFoodList[0];
+		var randomItem2 = randomFoodList[1];
+		var randomItem3 = randomFoodList[2];
+		
+		document.body.innerHTML = randomItem + "</br>" + randomItem2 + "</br>" + randomItem3;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+
+
+</html>
